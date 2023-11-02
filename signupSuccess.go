@@ -21,7 +21,7 @@ func (r *SignuppSuccess) SetData(data interface{}) {
 
 func (r *SignuppSuccess) SendResponse(c *gin.Context) func() {
 	return func () {
-		c.JSON(http.StatusBadRequest, gin.H{
+		c.JSON(http.StatusCreated, gin.H{
 		"Status":  r.status,
 		"Message": r.message,
 		"Data":    r.data})
