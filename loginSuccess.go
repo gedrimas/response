@@ -21,7 +21,7 @@ func (r *LoginSuccess) SetData(data interface{}) {
 
 func (r *LoginSuccess) SendResponse(c *gin.Context) func() {
 	return func () {
-		c.JSON(http.StatusUnauthorized, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 		"Status":  r.status,
 		"Message": r.message,
 		"Data":    r.data})
