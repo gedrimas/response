@@ -48,7 +48,11 @@ func GetResponse(responseType string) IResponse{
 	case "eventSavingError":
 		return newEventSavingError()
 	case "eventCreationSuccess":
-		return newEventCreationSuccess()													
+		return newEventCreationSuccess()	
+	case "eventsGettingSuccess":
+		return newAllEventsGettingSuccess()
+	case "eventsGettingError":
+		return newAllEventsGettingError()														
 	default:
 		return nil	
 	}
