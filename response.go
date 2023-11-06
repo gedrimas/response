@@ -42,7 +42,13 @@ func GetResponse(responseType string) IResponse{
 	case "loginError":
 		return newLoginError()
 	case "loginSuccess":
-		return newLoginSuccess()								
+		return newLoginSuccess()
+	case "eventCreationError":
+		return newEventCreationError()
+	case "eventSavingError":
+		return newEventSavingError()
+	case "eventCreationSuccess":
+		return newEventCreationSuccess()													
 	default:
 		return nil	
 	}
