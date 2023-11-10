@@ -73,3 +73,26 @@ func (r *CompanyCreationError) SendResponse(c *gin.Context) func() {
 		"Data":    r.data})
 	}
 }
+
+type CompaniesGettingSuccess struct {
+	Response
+}
+
+func newCompaniesGettingSuccess() *CompaniesGettingSuccess {
+	return &CompaniesGettingSuccess{}
+}
+
+func (r *CompaniesGettingSuccess) SetData(data interface{}) {
+	r.status = http.StatusOK
+	r.message = "Success getting companies."
+	r.data = data
+}
+
+func (r *CompaniesGettingSuccess) SendResponse(c *gin.Context) func() {
+	return func () {
+		c.JSON(http.StatusOK, gin.H{
+		"Status":  r.status,
+		"Message": r.message,
+		"Data":    r.data})
+	}
+}

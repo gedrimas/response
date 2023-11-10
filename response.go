@@ -34,7 +34,9 @@ func GetResponse(responseType string) IResponse{
 	case "companyGetError":
 		return newCompanyGettingError()
 	case "companyCreationError":
-		return newCompanyCreationError()			
+		return newCompanyCreationError()
+	case "companiesGettingSuccess":
+		return newCompaniesGettingSuccess()			
 	case "badRequest":
 		return newBadRequest()
 	case "signuppSuccess":
