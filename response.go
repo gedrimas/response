@@ -54,7 +54,15 @@ func GetResponse(responseType string) IResponse{
 	case "eventsGettingSuccess":
 		return newAllEventsGettingSuccess()
 	case "eventsGettingError":
-		return newAllEventsGettingError()														
+		return newAllEventsGettingError()
+	case "eventDeletionSuccess":
+		return newEventDeletionSuccess()
+	case "eventDeletionError":
+		return newEventDeletionError()		
+	case "eventUpdationSuccess":
+		return newEventUpdationSuccess()
+	case "eventUpdationError":
+		return newEventUpdationError()																
 	default:
 		return nil	
 	}
