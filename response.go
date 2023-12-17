@@ -23,6 +23,14 @@ func GetResponse(responseType string) IResponse{
 		return newEmailExistsError()
 	case "emailGetError":
 		return newEmailGettingError()
+	case "phoneExistsError":
+		return newPhoneExistsError()
+	case "phoneGetError":
+		return newPhoneGettingError()
+	case "facebookExistsError":
+		return newFacebookExistsError()
+	case "facebookGetError":
+		return newFacebookGettingError()			
 	case "userExistsError":
 		return newUserExistsError()
 	case "userGetError":
