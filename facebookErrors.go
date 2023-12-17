@@ -28,7 +28,6 @@ func (r *FacebookExistsError) SendResponse(c *gin.Context) func() {
 	}
 }
 
-
 type FacebookGettingError struct {
 	Response
 }
