@@ -70,7 +70,17 @@ func GetResponse(responseType string) IResponse{
 	case "eventUpdationSuccess":
 		return newEventUpdationSuccess()
 	case "eventUpdationError":
-		return newEventUpdationError()																
+		return newEventUpdationError()
+	case "visitorExclusionError":
+		return newVisitorExclusionError()
+	case "userListVisitExclusionError":
+		return newUserListVisitExclusionError()	
+	case "visitorAddingError":
+		return newVisitorAddingError()
+	case "eventAddingToUserListError":
+		return newEventAddingToUserListError()	
+	case "visitBookingSuccess": 
+		return newVisitBookingSuccess()																		
 	default:
 		return nil	
 	}

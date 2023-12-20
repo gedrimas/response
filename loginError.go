@@ -15,7 +15,7 @@ func newLoginError() *LoginError {
 
 func (r *LoginError) SetData(data interface{}) {
 	r.status = http.StatusUnauthorized
-	r.message = "Email or passord is incorrect"
+	r.message = "Wrong login or password"
 	r.data = data
 }
 
