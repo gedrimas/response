@@ -107,11 +107,34 @@ func newVisitBookingSuccess() *VisitBookingSuccess {
 
 func (r *VisitBookingSuccess) SetData(data interface{}) {
 	r.status = http.StatusCreated
-	r.message = "Event booking success!"
+	r.message = "Visit booking success!"
 	r.data = data
 }
 
 func (r *VisitBookingSuccess) SendResponse(c *gin.Context) func() {
+	return func () {
+		c.JSON(http.StatusCreated, gin.H{
+		"Status":  r.status,
+		"Message": r.message,
+		"Data":    r.data})
+	}
+}
+
+type VisitCancelationSuccess struct {
+	Response
+}
+
+func newVisitCancelationSuccess() *VisitCancelationSuccess {
+	return &VisitCancelationSuccess{}
+}
+
+func (r *VisitCancelationSuccess) SetData(data interface{}) {
+	r.status = http.StatusCreated
+	r.message = "Visit cancelation success!"
+	r.data = data
+}
+
+func (r *VisitCancelationSuccess) SendResponse(c *gin.Context) func() {
 	return func () {
 		c.JSON(http.StatusCreated, gin.H{
 		"Status":  r.status,

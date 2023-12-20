@@ -80,7 +80,9 @@ func GetResponse(responseType string) IResponse{
 	case "eventAddingToUserListError":
 		return newEventAddingToUserListError()	
 	case "visitBookingSuccess": 
-		return newVisitBookingSuccess()																		
+		return newVisitBookingSuccess()
+	case "visitCancelationSuccess":
+		return newVisitCancelationSuccess()																			
 	default:
 		return nil	
 	}
