@@ -82,7 +82,11 @@ func GetResponse(responseType string) IResponse{
 	case "visitBookingSuccess": 
 		return newVisitBookingSuccess()
 	case "visitCancelationSuccess":
-		return newVisitCancelationSuccess()																			
+		return newVisitCancelationSuccess()
+	case "bookedEventsGettingError": 
+		return newBookedEventsGettingError()
+	case "bookedEventsGettingSuccess": 
+		return newBookedEventsGettingSuccess()																				
 	default:
 		return nil	
 	}
