@@ -39,13 +39,13 @@ func newBookedEventsGettingSuccess() *BookedEventsGettingSuccess {
 
 func (r *BookedEventsGettingSuccess) SetData(data interface{}) {
 	r.status = http.StatusOK
-	r.message = "Success getting booked events."
+	r.message = "Success getting booked events!"
 	r.data = data
 }
 
 func (r *BookedEventsGettingSuccess) SendResponse(c *gin.Context) func() {
 	return func () {
-		c.JSON(http.StatusInternalServerError, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 		"Status":  r.status,
 		"Message": r.message,
 		"Data":    r.data})
