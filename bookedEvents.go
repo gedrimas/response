@@ -38,8 +38,8 @@ func newBookedEventsGettingSuccess() *BookedEventsGettingSuccess {
 }
 
 func (r *BookedEventsGettingSuccess) SetData(data interface{}) {
-	r.status = http.StatusInternalServerError
-	r.message = "Success gettin booked events."
+	r.status = http.StatusOK
+	r.message = "Success getting booked events."
 	r.data = data
 }
 
